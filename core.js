@@ -5,8 +5,17 @@
 (function(){
     "use strict";
     
-// Anti-debugger DESACTIVADO para GitHub Pages
-// Anti-console DESACTIVADO para GitHub Pages
+    // Anti-debugger
+    setInterval(function(){
+        var start=performance.now();
+        debugger;
+        var end=performance.now();
+        if(end-start>100){document.body.innerHTML='';}
+    },1000);
+    
+    // Anti-console (solo en producción)
+    var _console=window.console;
+    window.console={log:function(){},warn:function(){},error:function(){},table:function(){},clear:function(){}};
     
     // Datos encriptados en Base64
     var _d1="Q2hpenVHejIwMjRTZWNyZXQ=";
@@ -319,12 +328,7 @@
         }
         if(btn){btn.classList.remove('loading');btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg> Examinar';}
     };
-    // Contador
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-X2N6ZQ3KD4');
     // Init
     window.addEventListener('load',function(){
         window.initStorage();
