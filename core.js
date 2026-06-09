@@ -5,17 +5,8 @@
 (function(){
     "use strict";
     
-    // Anti-debugger
-    setInterval(function(){
-        var start=performance.now();
-        debugger;
-        var end=performance.now();
-        if(end-start>100){document.body.innerHTML='';}
-    },1000);
-    
-    // Anti-console (solo en producción)
-    var _console=window.console;
-    window.console={log:function(){},warn:function(){},error:function(){},table:function(){},clear:function(){}};
+// Anti-debugger DESACTIVADO para GitHub Pages
+// Anti-console DESACTIVADO para GitHub Pages
     
     // Datos encriptados en Base64
     var _d1="Q2hpenVHejIwMjRTZWNyZXQ=";
