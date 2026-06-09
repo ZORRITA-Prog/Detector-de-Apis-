@@ -6,13 +6,6 @@
     <title>API Detector Pro</title>
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/wrBgV7B7/image-removebg-preview.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2N6ZQ3KD4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X2N6ZQ3KD4');
-</script>
     <style>
         * {
             margin: 0;
@@ -1659,7 +1652,12 @@ window.examineApi=async function(){
     }
     if(btn){btn.classList.remove('loading');btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg> Examinar';}
 };
+// Contador
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-X2N6ZQ3KD4');
 // Init
 window.addEventListener('load',function(){
     window.initStorage();
